@@ -1,4 +1,10 @@
-# ASGMVLP_CODE
-The repo of ASGMVLP
-
-# Code will be released soon.
+# ASG
+The official codes for **Anatomical Structure-Guided Medical Vision-Language Pre-training**.
+# Dependencies
+```
+pip install -r requirements.txt
+```
+# Pre-training
+```
+CUDA_VISIBLE_DEVICES=0,1,2,3 python main.py
+```

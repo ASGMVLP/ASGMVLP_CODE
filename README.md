@@ -6,7 +6,7 @@ The official code for **Anatomical Structure-Guided Medical Vision-Language Pre-
 conda create --name asgmvlp python=3.8.5
 
 # Activate the environment
-conda activate mimiccxrvqa
+conda activate asgmvlp
 
 # Install required packages
 pip install -r requirements.txt

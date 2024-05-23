@@ -1,4 +1,9 @@
 # ASG
+[![License:Physionet](https://img.shields.io/badge/License-Physionet-red.svg)](https://physionet.org/)
+[![Homepage](https://img.shields.io/badge/Homepage-Visit-blue)](https://asgmvlp.github.io/)
+
+
+
 The official code for **Anatomical Structure-Guided Medical Vision-Language Pre-training**.
 ## Installation
 ```

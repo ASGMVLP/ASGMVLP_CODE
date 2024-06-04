@@ -26,7 +26,7 @@ pip install -r requirements.txt
 - [**CheXpert.**]( https://stanfordmlgroup.github.io/competitions/chexpert/) We use the original validation set as test data and randomly select 5, 000 radiographs from training data for validation. 
 - [**RSNA.**](https://www.kaggle.com/competitions/rsna-pneumonia-detection-challenge/data) We manually split the dataset into training, validation, and test set with 70%/15%/15% ratio.
 - [**COVIDx.**](https://www.kaggle.com/datasets/andyczhao/covidx-cxr2) We use the original validation set as test data and split 10% of original training set for validation.
-- [**NIH ChestXray14.**]( https://nihcc.app.box.com/v/ChestXray-NIHCC) We use the original validation set as test data and split 10% of original training set for validation.
+- [**NIH X-ray.**]( https://nihcc.app.box.com/v/ChestXray-NIHCC) We use the original validation set as test data and split 10% of original training set for validation.
 - [**SIIM.**](https://www.kaggle.com/competitions/siim-acr-pneumothorax-segmentation/data)  We manually split the dataset into training, validation, and test set with 70%/15%/15% ratio.
 
 ## Pre-training
@@ -255,38 +255,51 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python main.py --learning_rate 4e-5 --batch_size 72
 **Zero-Shot Classification**
 > For zero-shot, we use the same data split as in the linear probe.
 <table>
-<thead>
-  <tr>
-    <th rowspan="2">Method</th>
-    <th colspan="3">RSNA</th>
-  </tr>
-  <tr>
-    <th>AUC</th>
-    <th>F1</th>
-    <th>ACC</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>BioViL</td>
-    <td>83.8</td>
-    <td>58.1</td>
-    <td>77.8</td>
-  </tr>
-  <tr>
-    <td>MedKLIP</td>
-    <td>84.5</td>
-    <td>61.6</td>
-    <td>74.2</td>
-  </tr>
-  <tr>
-    <td>Ours</td>
-    <td><b>86.2</b></td>
-    <td><b>62.8</b></td>
-    <td><b>79.4</b></td>
-  </tr>
-</tbody>
-</table>
+  <thead>
+    <tr>
+      <th rowspan="2">Method</th>
+      <th colspan="3">RSNA</th>
+      <th colspan="3">NIH X-ray</th>
+    </tr>
+    <tr>
+      <th>AUC</th>
+      <th>F1</th>
+      <th>ACC</th>
+      <th>AUC</th>
+      <th>F1</th>
+      <th>ACC</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>BioViL</td>
+      <td>83.8</td>
+      <td>58.1</td>
+      <td>77.8</td>
+      <td>73.8</td>
+      <td>25.2</td>
+      <td>85.9</td>
+    </tr>
+    <tr>
+      <td>MedKLIP</td>
+      <td>84.5</td>
+      <td>61.1</td>
+      <td>74.2</td>
+      <td>75.6</td>
+      <td>26.0</td>
+      <td>87.8</td>
+    </tr>
+    <tr>
+      <td>Ours</td>
+      <td><b>86.2</b></td>
+      <td><b>62.8</b></td>
+      <td><b>79.4</b></td>
+      <td><b>77.0</b></td>
+      <td><b>27.5</b></td>
+      <td><b>90.0</b></td>
+    </tr>
+  </tbody>
+  </table>
 
 **Segmentation**
 <table>

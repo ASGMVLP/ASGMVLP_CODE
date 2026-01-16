@@ -6,6 +6,8 @@
 
 The official code for **Anatomical Structure-Guided Medical Vision-Language Pre-training**.
 
+- **[2026.01]** Model weights can be downloaded [here](https://drive.google.com/drive/folders/1iiZl7m8jM2ZqvEo-NpvZFbwJt1QO4Phh?usp=sharing) !
+
 - **[2024.06]** ASGMVLP is accepted by MICCAI 2024 🎉!
 
 ## Installation
